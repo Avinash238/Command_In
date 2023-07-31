@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('Commit_HTML.html')
+    return render_template('Command_HTML.html')
 
 @app.route('/convert', methods=['POST'])
 def convert():

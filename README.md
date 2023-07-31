@@ -44,15 +44,7 @@ The Currency Converter is a simple web application that allows users to convert 
 
 Contributions to this project are welcome! If you find any bugs, have feature suggestions, or want to improve the code, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
 - The forex_python library for providing real-time exchange rates.
 - The Flask community for creating a simple and powerful web framework.
-
-## Contact
-
-If you have any questions or inquiries about this project, please contact Avinash at karanmishra7319902@gmail.com.

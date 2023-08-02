@@ -10,27 +10,45 @@
 <body>
     <h1>Currency Converter</h1>
     <p>Supported Currencies: USD, EUR, GBP, JPY, INR, AUD, CAD, and more...</p>
-    <form id="currencyConverterForm">
+    <form action="{{ url_for('convert') }}" method="POST" id="currencyConverterForm">
         <label for="fromCurrency">From Currency:</label>
-        <select id="fromCurrency" required>
-            <!-- Add options for available currencies using <option> tags -->
+        <select id="fromCurrency" name="from_currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+		<option value="INR">INR</option>
+		<option value="AUD">AUD</option>
+		<option value="CAD">CAD</option>
+		<option value="GBP">GBP</option>
+            <!-- Add more currency options here -->
         </select>
 
         <label for="toCurrency">To Currency:</label>
-        <select id="toCurrency" required>
-            <!-- Add options for available currencies using <option> tags -->
+        <select id="toCurrency" name="to_currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+		<option value="INR">INR</option>
+		<option value="AUD">AUD</option>
+		<option value="CAD">CAD</option>
+		<option value="GBP">GBP</option>
+            <!-- Add more currency options here -->
         </select>
 
         <label for="amount">Amount:</label>
-        <input type="number" id="amount" step="0.01" required>
+        <input type="number" id="amount" name="amount" step="any" required> <!-- Use step="any" for decimal numbers -->
 
         <button type="submit">Convert</button>
     </form>
 
-    <div id="result"></div>
+    <div id="result">
+        {% if result %}
+            <p>Converted Amount: {{ result }}</p>
+        {% endif %}
+        {% if error %}
+            <p>Error: {{ error }}</p>
+        {% endif %}
+    </div>
 
-    <script>
-        // Add your JavaScript code here for handling the form submission and displaying the result
-    </script>
 </body>
 </html>
